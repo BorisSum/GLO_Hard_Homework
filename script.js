@@ -17,5 +17,5 @@ ProductOfDigits **= 3;
 
 const result = document.createElement('h1');
 document.body.appendChild(result);
-result.textContent = ProductOfDigits.toString();
+result.textContent = ProductOfDigits.toString().slice(0, 2);
 
