@@ -8,12 +8,13 @@ function stringModifier(data) {
    }
    data = data.trim();
    if (data.length > 30) {
-      data = data.split('').splice(0, 30,).join('') + '...';
+      data = data.slice(0, 30) + '...';
    }
    return data;
 }
 
 const str = '  Запушить свой проект в репозиторий для усложненных заданий на GitHub   ';
+//const str = '  Запушить свой проект   ';
 console.log(str);
 console.log(stringModifier(str));
 
