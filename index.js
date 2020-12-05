@@ -74,5 +74,8 @@ window.addEventListener('beforeunload', event => {
 
 document.addEventListener('DOMContentLoaded', () => {
    todoData = JSON.parse(localStorage.getItem('todos'));
+   if (todoData === null) {
+      todoData = [];
+   }
    render();
 });
