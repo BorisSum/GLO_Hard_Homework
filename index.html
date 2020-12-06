@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Регистрация и Логин</title>
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/main.css">
+   <script src="js/main.js" defer></script>
+</head>
+
+<body>
+   <div class="main-wrapper">
+      <div class="user-title_wrapper">
+         <div class="user-title">Привет, <span class='js-user-name'>Аноним</span>!</div>
+         <div class='user-logout closed js-logout'></div>
+         <div class="user-avatar"></div>
+      </div>
+      <!-- /.user-title -->
+      <form class="user-form">
+         <div class="user-signin js-user-signin-form">
+
+            <input type="text" class='user-signin-item user-name js-signin-name' placeholder='Введите имя и фамилию'
+               required>
+            </input>
+
+            <input type="text" class='user-signin-item user-login js-signin-login' placeholder='Введите логин' required>
+            </input>
+
+            <input type='password' class="user-signin-item user-password js-signin-password"
+               placeholder="Введите пароль" required></input>
+
+            <button class="user-signin-item signin-button js-button-signin">Авторизоваться</button>
+         </div>
+         <button class="toggle-button js-button-signup">Зарегистрироваться</button>
+      </form>
+      <!-- /.user-form -->
+
+      <div class="user-list-wrapper">
+         <div class="user-list-header js-list-header">
+            <div class="user-list-title">Список зарегистрированных пользователей</div>
+            <div class="user-list-arrow js-openlist"></div>
+         </div>
+         <!-- /.user-list-header -->
+         <div class="closed user-list-body js-user-list">
+
+         </div>
+         <!-- /.user-list-body -->
+      </div>
+      <!-- /.user-list-wrapper -->
+      <div class="footer">GLO_Academy: Курс JS 16.0. Бонусное задание выходного дня. Вторая неделя.</div>
+   </div>
+   <!-- /.main-wrapper -->
+</body>
+
+</html>
