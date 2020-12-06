@@ -290,7 +290,10 @@ btnLogout.addEventListener('click', event => {
    logout();
 });
 
-window.addEventListener('beforeunload', () => {
+window.addEventListener('beforeunload', event => {
+   event.preventDefault();
+   event.returnValue = '';
+
    localStorage.clear();
    localStorage.setItem('userData', JSON.stringify(userList));
 });
