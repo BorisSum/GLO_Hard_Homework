@@ -196,10 +196,10 @@ const logout = () => {
    // показать форму авторизации
    userForm.classList.toggle('closed');
    // скрыть список пользователей
-   btnOpenList.classList.toggle('ul-opened');
-   userListElem.classList.toggle('closed');
+   btnOpenList.classList.add('ul-opened');
+   userListElem.classList.add('closed');
    // убрать кнопку LogOut
-   btnLogout.classList.toggle('closed');
+   btnLogout.classList.add('closed');
    // очистить поля текущего пользователя
    clearUser();
    // Изменить приветствие
