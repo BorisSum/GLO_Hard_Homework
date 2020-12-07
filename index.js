@@ -3,7 +3,15 @@
 const fillBox = document.querySelector('.main-block');
 const button = document.querySelector('.randomize-btn');
 
-const rnd = () => Math.floor(Math.random() * 256).toString(16);
+const zeroFill = val => {
+   if (val.length === 1) {
+      return '0' + val;
+   } else {
+      return val;
+   }
+};
+
+const rnd = () => zeroFill(Math.floor(Math.random() * 256).toString(16));
 
 const getRandomColor = () => `#${rnd()}${rnd()}${rnd()}`;
 
