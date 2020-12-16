@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
    const createElement = () => {
       const elem = document.createElement('div');
-      elem.style.cssText = `position:relative; left:0; top:0; background-color:blue; width:100px; height:100px; margin-top:50px`;
+      elem.style.cssText =
+         `position:relative; left:0; top:0; background-color:blue; width:100px; height:100px; margin-top:50px`;
       document.body.append(elem);
       return elem;
    };
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
    };
 
-   let animationFlag = false;
+   let animationFlag = true;
 
    btnPause.addEventListener('click', event => {
       event.preventDefault();
@@ -46,10 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cancelAnimationFrame(requestID);
       coordX = 0;
       element.style.left = coordX + 'px';
-      animationFlag = false;
-      animation();
-
+      animationFlag = true;
    });
 
-   animation();
 });
