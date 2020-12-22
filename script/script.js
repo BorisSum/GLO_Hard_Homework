@@ -368,13 +368,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
       const togglePicture = (target, selector) => {
          if (target.matches(selector)) {
-            photos.forEach(item => {
-               if (target === item) {
-                  const currSrc = item.src;
-                  item.src = item.dataset.img;
-                  item.dataset.img = currSrc;
-               }
-            });
+            const currSrc = target.src;
+            target.src = target.dataset.img;
+            target.dataset.img = currSrc;
          }
       };
 
