@@ -321,22 +321,32 @@ window.addEventListener('DOMContentLoaded', () => {
          if (objectTypeVal && objectSquareVal) {
             total = price * objectTypeVal * objectSquareVal * premisesCountVal * daysCountVal;
          } else {
+            total = 0;
+            result.textContent = total;
             return;
          }
 
          // Выводим результат
 
-         let tempResult = 0, pauseVal = 5;
+         let tempResult = 0, pauseVal = 5, increment = 50;
 
          if (total <= 1000) {
             pauseVal = 50;
+            increment = 50;
+         } else if (total > 1000 || total < 50000) {
+            pauseVal = 10;
+            increment = 500;
+         }
+         else if (total > 50000) {
+            pauseVal = 1;
+            increment = 1000;
          }
 
          const interval = setInterval(() => {
             if (tempResult < total) {
-               result.textContent = tempResult += 50;
+               result.textContent = tempResult += increment;
             } else {
-               result.textContent = total;
+               result.textContent = Math.round(total);
                clearInterval(interval);
             }
          }, pauseVal);
