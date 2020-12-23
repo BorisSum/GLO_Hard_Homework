@@ -328,28 +328,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
          // Выводим результат
 
-         let tempResult = 0, pauseVal = 5, increment = 50;
+         let tempResult = 0;
 
-         if (total <= 1000) {
-            pauseVal = 50;
-            increment = 50;
-         } else if (total > 1000 || total < 50000) {
-            pauseVal = 10;
-            increment = 500;
-         }
-         else if (total > 50000) {
-            pauseVal = 1;
-            increment = 1000;
+         tempResult = total - 1000;
+         if (tempResult < 0) {
+            tempResult = 0;
          }
 
          const interval = setInterval(() => {
             if (tempResult < total) {
-               result.textContent = tempResult += increment;
+               result.textContent = tempResult += 25;
             } else {
                result.textContent = Math.round(total);
                clearInterval(interval);
             }
-         }, pauseVal);
+         }, 5);
       };
 
       clacBlock.addEventListener('input', event => {
